@@ -1,5 +1,7 @@
 # Dappcord
 
+Tutorial by Dapp University: https://github.com/dappuniversity/dappcord
+
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contracts & Tests)
