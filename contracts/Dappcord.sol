@@ -44,7 +44,7 @@ contract Dappcord is ERC721 {
 
         // Mint NFT
         totalSupply++;
-        _safeMint(msg.sender, 1);
+        _safeMint(msg.sender, totalSupply);
     }
 
     function getChannel(uint256 _id) public view returns (Channel memory) {
