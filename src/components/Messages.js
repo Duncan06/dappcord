@@ -45,7 +45,7 @@ const Messages = ({ account, messages, currentChannel }) => {
     <div className="text">
       <div className="messages">
 
-        {currentChannel && messages.filter(message => message.channel === currentChannel.id.toString()).map((message, index) => {
+        {currentChannel && messages.filter(message => message.channel === currentChannel.id.toString()).map((message, index) => (
           <div className="message" key={index}>
           <img src={person} alt="Person" />
           <div className="message_content">
@@ -55,7 +55,7 @@ const Messages = ({ account, messages, currentChannel }) => {
             </p>
           </div>
         </div>
-        })}
+        ))}
 
       </div>
 
