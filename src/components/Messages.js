@@ -37,11 +37,15 @@ const Messages = ({ account, messages, currentChannel }) => {
     })
   }
 
+  useEffect(() => {
+    scrollHandler()
+  })
+
   return (
     <div className="text">
       <div className="messages">
 
-        {currentChannel && currentChannel.id && messages.filter(message => message.channel === currentChannel.id.toString()).map((message, index) => {
+        {currentChannel && messages.filter(message => message.channel === currentChannel.id.toString()).map((message, index) => {
           <div className="message" key={index}>
           <img src={person} alt="Person" />
           <div className="message_content">
@@ -64,7 +68,7 @@ const Messages = ({ account, messages, currentChannel }) => {
             placeholder={`Message #${currentChannel.name}`}
             onChange={(e) => setMessage(e.target.value)} />
         ) : (
-          <input type="text" onChange={(e) => setMessage(e.target.value)}></input>
+          <input type="text" value="" placeholder={`Please Connect Wallet / Join the Channel`} disabled />
         )}
 
         <button type="submit">

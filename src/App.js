@@ -24,7 +24,7 @@ function App() {
   const [dappcord, setDappcord] = useState(null)
   const [channels, setChannels] = useState([])
 
-  const [currentChannel, setCurrentChannel] = useState([])
+  const [currentChannel, setCurrentChannel] = useState(null)
   const [messages, setMessages] = useState([])
 
   const loadBlockchainData = async () => {

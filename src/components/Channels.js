@@ -3,7 +3,6 @@ const Channels = ({ provider, account, dappcord, channels, currentChannel, setCu
   const channelHandler = async (channel) => {
     const hasJoined = await dappcord.hasJoined(channel.id, account)
 
-    console.log(hasJoined)
     if(hasJoined) {
       setCurrentChannel(channel)
     } else {
@@ -24,7 +23,7 @@ const Channels = ({ provider, account, dappcord, channels, currentChannel, setCu
           <li 
            key={index}
            onClick={() => channelHandler(channel)}
-           className={(currentChannel) && (currentChannel.id) && (currentChannel.id.toString() === channel.id.toString()) ? "active" : ""}
+           className={(currentChannel) && (currentChannel.id.toString() === channel.id.toString()) ? "active" : ""}
           >
             {channel.name}
           </li>
